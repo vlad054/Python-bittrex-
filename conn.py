@@ -2,7 +2,6 @@ import requests
 import json
 import os
 import glob
-#import tkinker
 from enum import Enum
 from tkinter import *
 
@@ -42,7 +41,7 @@ class Data():
         self.GetJSData()
         self.GetMarketList()
 
-#return json dict
+    #return json dict
     def GetJSData(self):
 
         self.fileName = self.data_for_file +'dump.txt'
@@ -139,7 +138,7 @@ class windowApp:
             + 'Created ' + str(self.mrktDataInfo[self.idSelectedList]['Created'])
         self.labelTextHigh.set(v)
 
-# get list as data
+    # get list as data
     def fillMrktInfoData(self,data):
         self.mrktDataInfo = data
 
@@ -150,13 +149,13 @@ class windowApp:
 
 if __name__ == '__main__':
 
-    myData = Data('Markets')
+#    myData = Data('Markets')
 #    js = myFile.GetJSData()
-    print(myData.js)
+#    print(myData.js)
 
     myData = Data('Summaries')
 #    js = myFile.GetJSData()
-    print(myData.js)
+#    print(myData.js)
 
 # make list of markets and summaries
 
@@ -171,9 +170,6 @@ if __name__ == '__main__':
 #add data to app list
     for mrkt in myData.market_list:
         myApp.insertInMrktList(mrkt['MarketName'])
-
-#add data to app info
-#    myApp.fillMrktInfoData(market_list)
 
 
     mainFrame.mainloop()
